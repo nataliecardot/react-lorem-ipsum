@@ -1,6 +1,6 @@
 # react-lorem-ipsum
 
-Lorem ipsum (dummy text) generator. One to eight paragraphs can be generated; the edge case of exceeding these bounds using the number input is handled.
+Lorem ipsum (dummy text) generator. The edge case of exceeding the bounds of available paragraphs using the number input is handled.
 
 To view, run `npm i && npm start` in downloaded project.
 
