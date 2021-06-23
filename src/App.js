@@ -6,11 +6,9 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // UPDATE: this is now actually number by default for some reason, so not converting to number
-    // console.log(typeof count);
-    // OLD: converting to number since even though it's input of type number, we get a string https://stackoverflow.com/a/35791893/8888320 (though it doesn't matter here)
-    // let amount = parseInt(count);
-    setText(data.slice(0, count));
+    // converting to number since even though it's input of type number, we get a string https://stackoverflow.com/a/35791893/8888320 (though it doesn't matter here)
+    let amount = parseInt(count);
+    setText(data.slice(0, amount));
   };
 
   return (
