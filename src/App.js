@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import data from './data';
+
 function App() {
   const [count, setCount] = useState(0);
   const [text, setText] = useState([]);
@@ -9,6 +10,9 @@ function App() {
     // converting to number since even though it's input of type number, we get a string https://stackoverflow.com/a/35791893/8888320 (though it doesn't actually matter here) if you hit submit after increasing the input above 0 (because otherwise setCount() isn't triggered and it's the default 0 for the count state value, which is of course of type number)
     // console.log(typeof count);
     let amount = parseInt(count);
+    if (count < 1) amount = 1;
+    // Note there are 8 items in the array and it's zero-indexed, so the final item is at index 7. slice doesn't include the final item, so this is fine
+    if (count > 8) amount = 8;
     setText(data.slice(0, amount));
   };
 
