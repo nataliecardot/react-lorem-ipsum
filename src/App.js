@@ -16,7 +16,7 @@ function App() {
     let amount = parseInt(count);
     if (count < 1) amount = 1;
     if (count > totalParagraphs) amount = totalParagraphs;
-    setText(data.slice(0, amount));
+    setText(data.slice(0, amount)); // Note slice excludes end element in the copy
   };
 
   return (
